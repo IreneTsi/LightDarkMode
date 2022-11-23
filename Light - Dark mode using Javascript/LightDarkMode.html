@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Google Fonts-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!--style CSS-->
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Open Sans", sans-serif;
+      }
+
+      div {
+        display: grid;
+        place-items: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      button {
+        padding: 10px 14px;
+        border-radius: 40px;
+        font-size: 18px;
+        border: none;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      button:hover {
+        scale: 1.1;
+      }
+      p {
+        font-size: 25px;
+        font-weight: 700;
+      }
+
+      /* To apply dark mode in body */
+      body.dark {
+        background-color: #131316;
+      }
+
+      /* To apply dark mode in p tag */
+      body.dark p {
+        color: #fff;
+      }
+    </style>
+
+    <title>Toggle Between Light - Dark Mode</title>
+  </head>
+
+  <body>
+    <div>
+      <button>Dark Mode</button>
+      <p>This is my website</p>
+    </div>
+    <!--Javascipt-->
+    <script>
+      //The Document method querySelector() returns the first Element within the document that matches the specified selector, or group of selectors.
+      const btn = document.querySelector("button");
+
+      // 1st solution, create a function and add a click event to a <button> element
+      btn.addEventListener("click", myFunction);
+
+      function myFunction() {
+        document.body.classList.toggle("dark");
+      }
+
+      /*
+//2st solution using addEventListener method
+
+btn.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+});
+*/
+
+      /* 3rd solution - Get the <body> element and toggle between the .dark-mode class:
+
+function myFunction() {
+  const element = document.body;
+  element.classList.toggle("dark-mode");
+}
+*/
+    </script>
+  </body>
+</html>

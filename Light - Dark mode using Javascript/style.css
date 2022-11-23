@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+div {
+  display: grid;
+  place-items: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+button {
+  padding: 10px 14px;
+  border-radius: 40px;
+
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  scale: 1.1;
+}
+
+p {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+/* To apply dark mode in body */
+body.dark {
+  background-color: #131316;
+}
+
+/* To apply dark mode in p tag */
+body.dark p {
+  color: #fff;
+}
